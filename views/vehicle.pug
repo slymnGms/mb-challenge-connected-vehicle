@@ -1,0 +1,48 @@
+extends layout
+
+block content 
+   h1 Vehicle Details 
+   ul 
+      li #{vehicle.licenseplate}
+      li #{vehicle.salesdesignation}
+      li #{vehicle.finorvin}
+      li #{vehicle.nickname}
+      li #{vehicle.modelyear}
+      li #{vehicle.colorname}
+      li #{vehicle.fueltype}
+      li #{vehicle.powerhp}
+      li #{vehicle.powerkw}
+      li #{vehicle.numberofdoors}
+      li #{vehicle.numberofseats}
+
+   h2 Statuses 
+   h3 Doors 
+   ul 
+      li Front Left #{doors.doorstatusfrontleft.value} #{doors.doorlockstatusfrontleft.value} 
+      li Front Right #{doors.doorstatusfrontright.value} #{doors.doorlockstatusfrontright.value} 
+      li Rear Left #{doors.doorstatusrearleft.value} #{doors.doorlockstatusrearleft.value} 
+      li Rear Right #{doors.doorstatusrearright.value} #{doors.doorlockstatusrearright.value} 
+      li 
+         a(href=`/vehicles/${vehicle.id}/doors/${doorCommand}`) #{doorCommand}
+   h3 Fuel 
+   ul 
+      li % #{fuel.fuellevelpercent}
+   h3 Charge 
+   ul 
+      li % #{charge.stateofcharge.value}
+   h3 Location 
+   ul
+      li Longtitude #{location.longitude.value}
+      li Latitude #{location.latitude.value}
+      li Heading #{location.heading.value}
+   h3 Odometer 
+   ul 
+      li Value #{odometer.odometer.value}
+      li Reset #{odometer.distancesincereset.value}
+      li Start #{odometer.distancesincestart.value} 
+   h3 Tires 
+   ul 
+      li Front Left #{tires.tirepressurefrontleft.value} 
+      li Front Right #{tires.tirepressurefrontright.value} 
+      li Rear Left #{tires.tirepressurerearleft.value} 
+      li Rear Right #{tires.tirepressurerearright.value} 

@@ -1,0 +1,5 @@
+extends layout
+
+block content 
+    a(href='https://id.mercedes-benz.com/as/authorization.oauth2?response_type=code&client_id='+id+'&redirect_uri=http://localhost:8080/oauth/redirect&scope=mb:vehicle:status:general&state=prompt=login consent') Vehicle Status
+    a(href='https://id.mercedes-benz.com/as/authorization.oauth2?response_type=code&client_id='+id+'&redirect_uri=http://localhost:8080/oauth/redirect&scope=mb:user:pool:reader&state=prompt=login consent') User Pool

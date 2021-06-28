@@ -1,0 +1,8 @@
+extends layout
+
+block content 
+   h1 Vehicle List 
+   ul
+      each vehicle, i in vehicles 
+         li 
+            a(href=`/vehicles/${vehicle.id}`) #{vehicle.licenseplate}
